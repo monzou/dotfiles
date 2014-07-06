@@ -1,0 +1,5 @@
+/.gitconfig.local
+/tags
+.ruby-version
+.DS_Store
+
