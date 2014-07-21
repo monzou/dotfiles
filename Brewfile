@@ -20,6 +20,12 @@ install mercurial
 install gist
 install hub
 
+tap peco/peco
+install peco
+
+tap motemen/ghq
+install ghq
+
 tap caskroom/cask
 tap caskroom/versions
 install brew-cask
