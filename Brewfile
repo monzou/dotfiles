@@ -31,6 +31,7 @@ tap caskroom/versions
 install brew-cask
 
 cask install alfred || true
+cask install hyperswitch || true
 cask install dropbox || true
 cask install evernote || true
 cask install google-chrome || true
