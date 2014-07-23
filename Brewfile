@@ -19,6 +19,7 @@ install git
 install mercurial
 install gist
 install hub
+install gradle
 
 tap peco/peco
 install peco
