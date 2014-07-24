@@ -15,5 +15,6 @@ fi
 # Source custom settings
 for file in `/bin/ls ~/.zsh/*`
 do
+  echo "source $file"
   source $file
 done

@@ -50,6 +50,7 @@ cask install skitch || true
 cask install sophos-anti-virus-home-edition || true
 cask install sparrow || true
 cask install skype || true
+cask install java || true
 
 cleanup
 doctor
