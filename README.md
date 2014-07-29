@@ -1,7 +1,7 @@
 ## dotfiles
 
-My dotfiles managed by [homeshick](https://github.com/andsens/homeshick).
+My dotfiles managed by [homeshick](https://github.com/andsens/homeshick)
 
 ```
-curl -L https://raw.githubusercontent.com/monzou/dotfiles/master/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/monzou/dotfiles/master/setup.sh | bash -s
 ```
