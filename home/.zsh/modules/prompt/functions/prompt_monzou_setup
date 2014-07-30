@@ -1,0 +1,65 @@
+# Load dependencies.
+pmodload 'helper'
+
+function prompt_monzou_pwd {
+  local pwd="${PWD/#$HOME/~}"
+  if [[ "$pwd" == (#m)[/~] ]]; then
+    _prompt_monzou_pwd="$MATCH"
+    unset MATCH
+  else
+    _prompt_monzou_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+  fi
+}
+
+function prompt_monzou_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  # Format pwd
+  prompt_monzou_pwd
+  # Get Git repository information
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+}
+
+
+function prompt_monzou_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info and python-info before each command.
+  add-zsh-hook precmd prompt_monzou_precmd
+
+  # Set editor-info parameters
+  zstyle ':prezto:module:editor:info:completing' format '%F{red}...%f'
+  zstyle ':prezto:module:editor:info:keymap:primary' format '%F{green}❯%F{green}❯%F{green}❯%f'
+  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format '%F{red}♺%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format '%F{green}❮%F{green}❮%F{green}❮%f'
+
+  # Set git-info parameters
+  zstyle ':prezto:module:git:info' verbose yes
+  zstyle ':prezto:module:git:info:action' format ':%F{yellow}%s%f'
+  zstyle ':prezto:module:git:info:branch' format ':%F{green}%b%f'
+  zstyle ':prezto:module:git:info:commit' format ':%F{green}%.7c%f'
+  zstyle ':prezto:module:git:info:position' format ':%F{red}%p%f'
+  zstyle ':prezto:module:git:info:dirty' format '%F{red}✗%f'
+  zstyle ':prezto:module:git:info:clean' format '%F{green}✔%f'
+  zstyle ':prezto:module:git:info:keys' format \
+    'info' '%F{blue}git%f$(coalesce "%b" "%p" "%c")%s' \
+    'status' '%C%D'
+
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] || [ -n "$SSH_CONNECTION" ]; then
+    HOS=" %F{magenta}☁%f (%F{yellow}%m%f) "
+  else
+    HOS=" "
+  fi
+  PROMPT='%F{yellow}%n@%m%f %F{cyan}${_prompt_monzou_pwd}%f$HOS%f%(!. %B%F{red}#%f%b.)${editor_info[keymap]} '
+  RPROMPT='${git_info[status]}%f ${git_info:+ ${(e)git_info[info]}} ${VIM:+" %F{green}V%f"}%F{yellow}[%*]%f'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+prompt_monzou_setup "$@"

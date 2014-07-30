@@ -15,5 +15,7 @@ fi
 # Source custom settings
 for file in `/bin/ls ~/.zsh/*`
 do
-  source $file
+  if [[ -f $file ]]; then
+    source $file
+  fi
 done
