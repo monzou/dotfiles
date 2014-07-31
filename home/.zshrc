@@ -5,12 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-bindkey -e
-
 # Source Prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# Keybind
+bindkey -e
 
 # Source custom settings
 for file in `/bin/ls ~/.zsh/*`

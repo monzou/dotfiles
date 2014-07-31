@@ -2,4 +2,4 @@
 /tags
 .ruby-version
 .DS_Store
-
+*.swp
