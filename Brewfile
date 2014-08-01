@@ -21,6 +21,8 @@ install bash-completion
 install zsh
 install go
 install nodebrew
+install rbenv
+install ruby-build
 install git
 install mercurial
 install gist
