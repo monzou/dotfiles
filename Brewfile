@@ -42,7 +42,6 @@ cask install sourcetree || true
 cask install things || true
 cask install yorufukurou || true
 cask install vlc || true
-cask install sparrow || true
 cask install skype || true
 cask install java7 || true
 cask install java || true
