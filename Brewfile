@@ -44,6 +44,7 @@ cask install vlc || true
 cask install sparrow || true
 cask install skype || true
 cask install java || true
+cask install node || true
 
 cleanup
 doctor
