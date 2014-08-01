@@ -20,6 +20,7 @@ install wget
 install bash-completion
 install zsh
 install go
+install nodebrew
 install git
 install mercurial
 install gist
@@ -45,7 +46,6 @@ cask install sparrow || true
 cask install skype || true
 cask install java7 || true
 cask install java || true
-cask install node || true
 
 cleanup
 doctor
