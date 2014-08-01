@@ -1,6 +1,6 @@
 package="Update Formulae"
 
-which brew
+which brew > /dev/null
 if [ $? == 0 ]; then
   brew bundle
   brew cask alfred link
