@@ -1,6 +1,21 @@
 [ui]
 username = monzou <1984tkr@gmail.com>
 [extensions]
+color =
+graphlog =
+pager =
+fetch =
 hgflow = ~/Dropbox/dev/env/hgflow/src/hgflow.py
+[pager]
+pager = LESS='FRX' less
+quiet = True
+ignore = version, help, update
+attend = annotate, cat, diff, d, export, glog, gl, log, l, qdiff
+[alias]
+diff = d
+l = log
+gl = glog
+sh = shelve
+ush = unshelve
 
 %include ~/.hgrc.local
