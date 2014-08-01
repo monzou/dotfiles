@@ -1,0 +1,6 @@
+[ui]
+username = monzou <1984tkr@gmail.com>
+[extensions]
+hgflow = ~/Dropbox/dev/env/hgflow/src/hgflow.py
+
+%include ~/.hgrc.local
