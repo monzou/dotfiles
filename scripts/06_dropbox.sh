@@ -4,14 +4,6 @@ DROPBOX_DIR="${HOME}/Dropbox"
 SUBLIME_DIR="${HOME}/Library/Application Support/Sublime Text 3/"
 
 if [[ -d "${DROPBOX_DIR}" ]]; then
-  # Sync dev
-  package="Sync dev w/ Dropbox"
-  if [[ ! -L "${HOME}/dev" ]]; then
-    ln -sf ${DROPBOX_DIR}/dev ${HOME}/dev
-    log_done ${package}
-  else
-    log_skip ${package}
-  fi
   # Sync sublime settings
   if [[ -e "${SUBLIME_DIR}" ]]; then
     package="Sync Sublime Packages w/ Dropbox"
