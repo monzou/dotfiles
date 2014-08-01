@@ -43,6 +43,7 @@ cask install yorufukurou || true
 cask install vlc || true
 cask install sparrow || true
 cask install skype || true
+cask install java7 || true
 cask install java || true
 cask install node || true
 
