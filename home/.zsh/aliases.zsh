@@ -6,3 +6,5 @@ alias gd="git diff"
 alias ga="git add -A"
 alias gc="git commit"
 alias gp="git push"
+
+alias jj="/usr/libexec/java_home -v"
