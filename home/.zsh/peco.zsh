@@ -90,8 +90,8 @@ alias popen="peco-open"
 
 # snippets
 function peco-snippets() {
-  BUFFER=$(grep -v "^#" ~/dev/snippets.txt | peco --query "$LBUFFER")
+  BUFFER=$(grep -v "^#" ~/Dropbox/dev/snippets.txt | peco --query "$LBUFFER")
   zle clear-screen
 }
 zle -N peco-snippets
-bindkey '^x^s' peco-snippets
+bindkey '^x^x' peco-snippets
