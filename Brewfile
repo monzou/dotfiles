@@ -27,6 +27,7 @@ install git
 install mercurial
 install gist
 install hub
+install mogenerator
 install gradle
 install peco
 install ghq
