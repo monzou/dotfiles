@@ -37,10 +37,12 @@ cask install alfred || true
 cask install hyperswitch || true
 cask install dropbox || true
 cask install google-chrome || true
+cask install google-drive || true
 cask install iterm2 || true
 cask install coteditor || true
 cask install sublime-text3 || true
 cask install sourcetree || true
+cask install kobito || true
 cask install things || true
 cask install yorufukurou || true
 cask install vlc || true
