@@ -1,0 +1,8 @@
+syntax: glob
+
+/.hgrc.local
+/tags
+.ruby-version
+.DS_Store
+.git
+*.swp
