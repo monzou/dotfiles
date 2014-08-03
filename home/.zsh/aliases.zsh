@@ -12,3 +12,5 @@ alias gp="git pull"
 alias gpp="git push"
 
 alias jj="/usr/libexec/java_home -v"
+
+alias review="osascript .scripts/things_review.scpt"
