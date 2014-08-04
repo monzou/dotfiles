@@ -13,4 +13,4 @@ alias gpp="git push"
 
 alias jj="/usr/libexec/java_home -v"
 
-alias review="osascript .scripts/things_review.scpt"
+alias review="osascript ~/.scripts/things_review.scpt"
