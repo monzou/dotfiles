@@ -29,6 +29,7 @@ install gist
 install hub
 install mogenerator
 install gradle
+install awscli
 install peco
 install ghq
 install brew-cask
