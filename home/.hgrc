@@ -13,6 +13,7 @@ quiet = True
 ignore = version, help, update
 attend = annotate, cat, diff, d, export, glog, gl, log, l, qdiff
 [alias]
+s = status
 diff = d
 l = log
 gl = glog
