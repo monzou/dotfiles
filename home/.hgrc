@@ -1,5 +1,6 @@
 [ui]
 username = monzou <1984tkr@gmail.com>
+ignore = ~/.hgignore_global
 [extensions]
 color =
 graphlog =
