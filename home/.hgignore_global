@@ -1,0 +1,9 @@
+syntax: glob
+
+*~
+.DS_Store
+.ruby-version
+.git
+*.swp
+.idea
+*.iml
