@@ -7,6 +7,8 @@ graphlog =
 pager =
 fetch =
 hgflow = ~/Dropbox/dev/env/hgflow/src/hgflow.py
+[flow]
+autoshelve = true
 [pager]
 pager = LESS='FRX' less
 quiet = True
