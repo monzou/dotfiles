@@ -23,6 +23,7 @@ install go
 install nodebrew
 install rbenv
 install ruby-build
+install mysql
 install git
 install mercurial
 install gist
@@ -45,6 +46,7 @@ cask install coteditor || true
 cask install sublime-text3 || true
 cask install sourcetree || true
 cask install intellij-idea || true
+cask install sequel-pro || true
 cask install kobito || true
 cask install things || true
 cask install yorufukurou || true
