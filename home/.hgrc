@@ -6,6 +6,7 @@ color =
 graphlog =
 pager =
 fetch =
+mq =
 shelve =
 hgflow = ~/Dropbox/dev/env/hgflow/src/hgflow.py
 [flow]
