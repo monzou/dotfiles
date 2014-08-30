@@ -20,9 +20,9 @@ attend = annotate, cat, diff, d, export, glog, gl, log, l, qdiff
 s = status
 diff = d
 l = log
-ll = log --rev tip:0 --follow
+ll = log -b .
 gl = glog
-gll = glog --rev tip:0 --follow
+gll = glog -b .
 sh = shelve
 ush = unshelve
 
