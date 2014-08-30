@@ -2,8 +2,8 @@ alias ll="ls -la"
 alias zz="source ~/.zshrc"
 
 alias dot="homesick cd dotfiles"
-alias dot-sym="homesick symlink dotfiles"
-alias dot-bundle="dot && brew bundle"
+alias dotsym="homesick symlink dotfiles"
+alias dotbundle="dot && bundle"
 
 alias gs="git status --short"
 alias gd="git diff"
@@ -15,5 +15,5 @@ alias gpp="git push"
 alias jj="/usr/libexec/java_home -v"
 
 alias review="osascript ~/.scripts/things_review.scpt"
-alias e-edit="subl ~/Dropbox/docs/english/words.md"
-alias e-sync="cd ~/Dropbox/docs/english && mailbot sync --file words.md && popd"
+alias esync="cd ~/Dropbox/docs/english/ && mailbot sync && popd"
+alias eedit="subl ~/Dropbox/docs/english/index.md"
