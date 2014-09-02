@@ -24,6 +24,7 @@ install nodebrew
 install rbenv
 install ruby-build
 install mysql
+install redis
 install git
 install mercurial
 install gist
@@ -54,6 +55,7 @@ cask install vlc || true
 cask install skype || true
 cask install java7 || true
 cask install java || true
+cask install macs-fan-control || true
 
 cleanup
 doctor
