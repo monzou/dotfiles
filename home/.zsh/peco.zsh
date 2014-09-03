@@ -2,9 +2,6 @@ if ! which peco > /dev/null; then
   return
 fi
 
-# git branch
-alias -g GB='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
-
 # history
 function peco-select-history() {
   typeset tac
@@ -41,52 +38,6 @@ function peco-pkill() {
     echo "Killed ${pid}"
   done
 }
-alias pk="peco-pkill"
-
-# cd
-function peco-cd() {
-  local var
-  local dir
-  if [ ! -t 0 ]; then
-  var=$(cat -)
-  dir=$(echo -n $var | peco)
-  else
-      return 1
-  fi
-
-  if [ -d "$dir" ]; then
-      cd "$dir"
-  else
-      echo "'$dir' was not directory." >&2
-      return 1
-  fi
-}
-alias pcd="peco-cd"
-
-# open
-function peco-open() {
-  local var
-  local file
-  local command="open"
-  if [ ! -t 0 ]; then
-      var=$(cat -)
-      file=$(echo -n $var | peco)
-  else
-      return 1
-  fi
-
-  if [ -n "$1" ]; then
-    command="$1"
-  fi
-
-  if [ -e "$file" ]; then
-      eval "$command $file"
-  else
-      echo "Could not open '$file'." >&2
-      return 1
-  fi
-}
-alias popen="peco-open"
 
 # snippets
 function peco-snippets() {
