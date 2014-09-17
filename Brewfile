@@ -24,6 +24,7 @@ install nodebrew
 install rbenv
 install ruby-build
 install mysql
+install postgresql
 install redis
 install git
 install mercurial
