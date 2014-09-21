@@ -20,3 +20,10 @@ alias eedit="subl ~/Dropbox/docs/english/index.md"
 
 alias pp="ps aux | peco"
 alias pk="peco-pkill"
+
+alias xl="tmux list-session"
+alias xa="tmux attach -t"
+alias xd="tmux detach"
+alias xn="tmux new -s"
+alias xk="tmux kill-session"
+alias xs="tmux kill-server"

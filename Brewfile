@@ -19,6 +19,8 @@ install tree
 install wget
 install bash-completion
 install zsh
+install tmux
+install reattach-to-user-namespace
 install go
 install nodebrew
 install rbenv

@@ -1,0 +1,11 @@
+#!/bin/sh
+if ! type pbcopy >/dev/null 2>&1 || ! type reattach-to-user-namespace >/dev/null 2>&1; then
+  tmux display-message "[ ERROR ] CANNOT COPY TO CLIPBOARD"
+  exit 0
+fi
+
+COPY=`tmux save-buffer -`
+echo "$COPY" | reattach-to-user-namespace pbcopy
+
+LINES=`echo "$COPY" | wc -l | tr -d ' '`
+tmux display-message "[ COPY ] $LINES lines"
