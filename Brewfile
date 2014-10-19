@@ -59,6 +59,7 @@ cask install skype || true
 cask install java7 || true
 cask install java || true
 cask install macs-fan-control || true
+cask install heroku-toolbelt || true
 
 cleanup
 doctor
