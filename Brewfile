@@ -38,6 +38,7 @@ install awscli
 install peco
 install ghq
 install brew-cask
+install jq
 
 # Install .dmg
 cask install alfred || true
