@@ -9,6 +9,7 @@ fetch =
 mq =
 shelve =
 hgflow = ~/Dropbox/dev/env/hgflow/src/hgflow.py
+hgext.collapse = ~/Dropbox/dev/env/hgcollapse/hgext/collapse.py
 [flow]
 autoshelve = true
 [pager]
