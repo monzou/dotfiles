@@ -28,6 +28,7 @@ install ruby-build
 install mysql
 install postgresql
 install redis
+install memcached
 install nginx
 install git
 install mercurial
