@@ -46,3 +46,24 @@ function peco-snippets() {
 }
 zle -N peco-snippets
 bindkey '^x^x' peco-snippets
+
+# find
+function peco-find-file() {
+  if git rev-parse 2> /dev/null; then
+    source_files=$(git ls-files)
+  elif hg status 2> /dev/null; then
+    source_files=$(hg manifest)
+  else
+    source_files=$(find . -type f)
+  fi
+  selected_files=$(echo $source_files | peco --prompt "[find file]")
+  result=''
+  for file in $selected_files; do
+    result="${result}$(echo $file | tr '\n' ' ')"
+  done
+  BUFFER="${BUFFER}${result}"
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N peco-find-file
+bindkey '^f^f' peco-find-file
