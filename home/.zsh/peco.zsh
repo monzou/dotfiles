@@ -67,3 +67,14 @@ function peco-find-file() {
 }
 zle -N peco-find-file
 bindkey '^f^f' peco-find-file
+
+# ag
+function peco-ag-vim() {
+  vim $(ag "$@" | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+}
+zle -N peco-ag-vim
+
+function peco-ag-less() {
+  aa $@ | peco --query "$LBUFFER" | awk -F : '{print $1}' | xargs less -iMR
+}
+zle -N peco-ag-less
