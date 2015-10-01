@@ -21,7 +21,6 @@ alias eedit="subl ~/Dropbox/docs/english/index.md"
 alias pp="ps aux | peco"
 alias pk="peco-pkill"
 alias vv="peco-ag-vim"
-alias aa="peco-ag-less"
 
 alias xl="tmux list-session"
 alias xa="tmux attach -t"
