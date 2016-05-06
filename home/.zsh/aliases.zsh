@@ -7,6 +7,8 @@ alias dotbundle="dot && bundle"
 
 alias gs="git status --short"
 alias gd="git diff"
+alias gl="git log --oneline --graph --decorate"
+alias gll="git log --date=short --graph --decorate --numstat"
 alias ga="git add -A"
 alias gc="git commit"
 alias gp="git pull"
