@@ -15,13 +15,17 @@ alias gpp="git push"
 
 alias jj="/usr/libexec/java_home -v"
 
+alias today="~/Dropbox/var/log/today.sh"
+alias log="subl ~/Dropbox/var/log"
 alias review="osascript ~/.scripts/things_review.scpt"
 alias esync="cd ~/Dropbox/docs/english/ && mailbot sync && popd"
 alias eedit="subl ~/Dropbox/docs/english/index.md"
 
 alias pp="ps aux | peco"
 alias pk="peco-kill"
-alias vv="peco-ag-vim"
+
+alias sub="peco-ag-sublime"
+alias co="peco-ag-cot"
 
 alias xl="tmux list-session"
 alias xa="tmux attach -t"

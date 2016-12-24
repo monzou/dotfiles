@@ -69,29 +69,14 @@ function peco-snippets() {
 zle -N peco-snippets
 bindkey '^x^x' peco-snippets
 
-# find
-function peco-find-file() {
-  if git rev-parse 2> /dev/null; then
-    source_files=$(git ls-files)
-  elif hg status 2> /dev/null; then
-    source_files=$(hg manifest)
-  else
-    source_files=$(find . -type f)
-  fi
-  selected_files=$(echo $source_files | peco --prompt "[find file]")
-  result=''
-  for file in $selected_files; do
-    result="${result}$(echo $file | tr '\n' ' ')"
-  done
-  BUFFER="${BUFFER}${result}"
-  CURSOR=$#BUFFER
-  zle redisplay
+# sublime
+function peco-ag-sublime() {
+  subl $(ag "$@" | peco --query "$LBUFFER" | awk -F : '{print $1 ":" $2}')
 }
-zle -N peco-find-file
-bindkey '^f^f' peco-find-file
+zle -N peco-ag-sublime
 
-# ag
-function peco-ag-vim() {
-  vim $(ag "$@" | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+# cot-editor
+function peco-ag-cot() {
+  cot $(ag "$@" | peco --query "$LBUFFER" | awk -F : '{print $1 " --line " $2}')
 }
-zle -N peco-ag-vim
+zle -N peco-ag-cot
