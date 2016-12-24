@@ -42,6 +42,7 @@ install peco
 install ghq
 install brew-cask
 install jq
+install watchman
 
 # Install .dmg
 cask install alfred || true
