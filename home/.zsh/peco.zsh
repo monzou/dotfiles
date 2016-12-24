@@ -31,13 +31,35 @@ stty -ixon
 bindkey '^s' peco-src
 
 # process kill
-function peco-pkill() {
+function peco-kill() {
   for pid in `ps aux | peco | awk '{ print $2 }'`
   do
     kill $pid
     echo "Killed ${pid}"
   done
 }
+zle -N peco-kill
+bindkey '^k' peco-kill
+
+# ssh
+function peco-ssh () {
+  local selected_host=$(awk '
+  tolower($1)=="host" {
+    for (i=2; i<=NF; i++) {
+      if ($i !~ "[*?]") {
+        print $i
+      }
+    }
+  }
+  ' ~/.ssh/config | sort | peco --query "$LBUFFER")
+  if [ -n "$selected_host" ]; then
+    BUFFER="ssh ${selected_host}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ssh
+bindkey '^h' peco-ssh
 
 # snippets
 function peco-snippets() {

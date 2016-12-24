@@ -3,7 +3,6 @@ alias zz="source ~/.zshrc"
 
 alias dot="homesick cd dotfiles"
 alias dotsym="homesick symlink dotfiles"
-alias dotbundle="dot && bundle"
 
 alias gs="git status --short"
 alias gd="git diff"
@@ -21,7 +20,7 @@ alias esync="cd ~/Dropbox/docs/english/ && mailbot sync && popd"
 alias eedit="subl ~/Dropbox/docs/english/index.md"
 
 alias pp="ps aux | peco"
-alias pk="peco-pkill"
+alias pk="peco-kill"
 alias vv="peco-ag-vim"
 
 alias xl="tmux list-session"
