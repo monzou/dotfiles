@@ -26,6 +26,12 @@ done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Workaround for SDKMAN
+setopt clobber
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/monzou/.sdkman"
 [[ -s "/Users/monzou/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/monzou/.sdkman/bin/sdkman-init.sh"
+
+# Rollback workaround
+setopt noclobber
